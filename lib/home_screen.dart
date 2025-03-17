@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
       Icon(selectedNavScreen == 3 ? CupertinoIcons.person_fill : CupertinoIcons.person, size: 40),
     ];
 
-    List<Widget> navScreens = [
+    const List<Widget> navScreens = [
       JournalScreen(),
       AddTrainingScreen(),
       CalculateScreen(),
@@ -41,6 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
             (index) {
               return AnimatedPositioned(
                 duration: Duration(milliseconds: (selectedNavScreen == index || previouslySelected == index) ? 500 : 0),
+                curve: Curves.easeOut,
                 right: selectedNavScreen == index
                     ? 0
                     : selectedNavScreen < index

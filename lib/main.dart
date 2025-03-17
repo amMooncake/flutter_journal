@@ -10,25 +10,18 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const dark = Color.fromARGB(255, 21, 20, 24);
-    const primary = Color(0xff93cc60);
-    const secondary = Color(0xfff85588);
-    const white = Color.fromARGB(255, 241, 245, 241);
+    const white = Color.fromARGB(255, 255, 255, 255);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         textTheme: TextTheme(
-          bodySmall: TextStyle(fontSize: 12, color: white),
-          bodyMedium: TextStyle(fontSize: 20, color: white),
-          bodyLarge: TextStyle(fontSize: 30, color: white),
+          bodySmall: TextStyle(fontSize: 13, color: white, fontWeight: FontWeight.w300),
+          bodyMedium: TextStyle(fontSize: 18, color: white, fontWeight: FontWeight.w500),
+          bodyLarge: TextStyle(fontSize: 30, color: white, fontWeight: FontWeight.w800),
         ),
         colorScheme: ColorScheme.fromSeed(
           brightness: Brightness.dark,
-          seedColor: primary,
-          primary: primary,
-          secondary: secondary,
-          surface: dark,
-          surfaceDim: Color(0xff0c0b0e),
+          seedColor: const Color(0xFF2196F3),
           onSurface: white,
         ),
       ),

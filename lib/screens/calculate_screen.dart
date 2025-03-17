@@ -9,10 +9,26 @@ class CalculateScreen extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
-        color: Colors.red,
+        gradient: LinearGradient(
+          colors: [Theme.of(context).colorScheme.onSecondary, Theme.of(context).colorScheme.surfaceBright],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+        ),
       ),
       child: Center(
-        child: Text("calculate Screen"),
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+            child: Column(
+              children: [
+                Text(
+                  "Calculate",
+                  style: Theme.of(context).textTheme.bodyMedium,
+                )
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
